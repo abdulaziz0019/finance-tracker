@@ -11,6 +11,8 @@ gem 'jquery-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
+gem 'get_news'
+gem "google_custom_search_api"
 
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
