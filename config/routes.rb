@@ -5,5 +5,9 @@ get 'welcome' , to: 'welcome#index'
 get 'my_portfolio' , to:'user#my_portfolio'
 get 'searchstock' , to: 'stock#search'
 get 'search_in_google' ,to: 'stock#google'
+post 'save_in_profile' ,to: 'user#save_news'
+get  'profile' , to: 'user#profile'
+
+
 
 end

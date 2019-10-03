@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_20_225321) do
+ActiveRecord::Schema.define(version: 2019_09_26_212730) do
+
+  create_table "search_results", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "title"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_search_results_on_user_id"
+  end
 
   create_table "stocks", force: :cascade do |t|
     t.string "ticker"

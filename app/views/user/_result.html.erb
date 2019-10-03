@@ -1,0 +1,16 @@
+<div class="search-block">
+  <%= bootstrap_flash %>
+</div>
+<% if @stock %>
+<h3>we have found <%= @stock.count %> titles related to <%=@data%></h3>
+<table class="table table-dark">
+  <tbody>
+    <% @stock.each do |title |%>
+    <tr>
+      <td><%= title %> <%= link_to "read" , search_in_google_path("title": title) , class: "btn btn-default" %>
+      <%= link_to "save" , save_in_profile_path("title": title), method: :post , class: "btn btn-primary" %></td>
+    <%end%>
+    </tr>
+  </tbody>
+</table>
+<% end %>
